@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+.center {
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+}
+figcaption {
+  text-align: center;
+  font-size: 2em;
+}
+figcaption span {
+  font-weight: bold;
+}
+.fc:after, .fc:before {
+  content: '';
+  display: table;
+}
+.fc:after {
+  clear: both;
+}
+.w-30p {
+  width: 30%;
+}
+.w-70p {
+  width: 70%;
+}
+.w-80p {
+  width: 80%;
+}
+.fl-r {
+  float: right;
+}
+.fl-l {
+  float: left;
+}
+.no-margin {
+  margin: 0;
+}
+.p-20 {
+  padding: 20px;
+}
