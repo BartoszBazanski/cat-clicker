@@ -42,3 +42,27 @@ figcaption span {
 .p-20 {
   padding: 20px;
 }
+.hidden {
+  display: none;
+}
+
+.list {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.list li {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 1px 1px gray;
+}
+.list li:active {
+  transform: translateY(2px);
+  box-shadow: 1px 0 1px 1px gray;
+}

@@ -27,7 +27,12 @@ var cats = [
 ];
 var catList = [];
 var list = document.querySelector('.list');
+var title = document.querySelector('h1');
+var image = document.querySelector('img');
+var counter = document.querySelector('span');
+var catDisplay = document.querySelector('#catDisplay');
 var itemList;
+
 cats.forEach(function(cat, id) {
   itemList = document.createElement('li');
   itemList.id = id;
@@ -35,39 +40,19 @@ cats.forEach(function(cat, id) {
 
   itemList.addEventListener('click', (function(cats, id) {
     return function() {
-      document.querySelector('h1').textContent = cats[id].name;
-      document.querySelector('img').id = id;
-      document.querySelector('img').src = 'assets/images/' + cats[id].imageUrl;
-      document.querySelector('span').textContent = cats[id].clicks;
-
-      console.log(cats[id]);
+      if(catDisplay.classList.contains('hidden')) {
+        catDisplay.classList.remove('hidden');
+      }
+      title.textContent = cats[id].name;
+      image.id = id;
+      image.src = 'assets/images/' + cats[id].imageUrl;
+      counter.textContent = cats[id].clicks;
     };
   })(cats, id));
   list.append(itemList);
 });
 
-function createCatFigure(cat) {
-  return '<figure class="fl-r w-50p no-margin p-20">'+
-          '<header>'+
-            '<h1>'+ cat.name +'</h1>'+
-          '</header>'+
-          '<img src="assets/images/'+ cat.imageUrl +'" alt="Picture of the cat">'+
-          '<figcaption>'+
-            '<p>Clicker counter: <span>0</span></p>'+
-          '</figcaption>'+
-         '</figure>';
-}
-document.querySelectorAll('figure h1').forEach(function(title, id) {
-  console.log(id, title);
-  title.innerText = catNames[id];
+image.addEventListener('click', function() {
+  cats[this.id].clicks++;
+  counter.textContent = cats[this.id].clicks;
 });
-var cats = document.querySelectorAll('img');
-
-// cats.forEach(function(cat) {
-//   cat.addEventListener('click', function(e) {
-//     var counterContainer = this.parentNode.querySelector('span');
-//     var counter = parseInt(counterContainer.innerText);
-//     counter++;
-//     this.parentNode.querySelector('span').innerText = counter;
-//   });
-// });
