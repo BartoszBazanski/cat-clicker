@@ -13,17 +13,17 @@ var model = {
     },
     {
       name: "Meow",
-      imageUrl: 'kitten_1.jpg',
+      imageUrl: 'kitten_3.jpg',
       clicksCounter: 0
     },
     {
       name: "Rix",
-      imageUrl: 'kitten_2.jpg',
+      imageUrl: 'kitten_4.jpg',
       clicksCounter: 0
     },
     {
       name: "Dori",
-      imageUrl: 'kitten_1.jpg',
+      imageUrl: 'kitten_2.jpg',
       clicksCounter: 0
     },
   ],
